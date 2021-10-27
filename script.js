@@ -19,7 +19,7 @@ for(let i=0;i<dogs.length;i++){
 
     let card = document.createElement("div")
     card.classList.add("card")
-    document.body.appendChild(card)
+    document.getElementById("cardHolder").appendChild(card)
 
     let dogName=document.createElement("h1")
     card.appendChild(dogName)
@@ -38,9 +38,8 @@ for(let i=0;i<dogs.length;i++){
     dogPic.src=dogs[i].picture
     dogPic.classList.add("dogpic")
 
-    let adopt=document.createElement("button")
-    adopt.innerHTML= "Adopt Me!"
-    document.body.appendChild(adopt)
-    adopt.classList.add("adoptbtn")
-
+    let adoptNow=document.createElement("button")
+    adoptNow.classList.add("button")
+    adoptNow.innerHTML="Adopt Now"
+    card.appendChild(adoptNow)
 }
